@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./admin/css/style.css" rel="stylesheet">
   </head>
+  <script>
+  function makeid(len)
+  {
+      var text = "";
+      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      for( var i=0; i < len; i++ )
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+      return text;
+  }
+  </script>
 <body class="gray-bg">
     <div class="wrapper wrapper-content">
         <div class="row">
@@ -22,7 +32,9 @@
                                         <tbody>
                                             <tr>
                                                 <td class="project-status">
-                                                  <img src="https://cdn.luogu.com.cn/fe/logo.png" height="50\" />
+                                                    <script>
+                                                        document.write("<img src=\"https://cdn.luogu.com.cn/fe/logo.png?"+makeid(32)+"\" height=\"50\" />");
+                                                    </script>
                                                 </td>
                                                 <td class="project-title">
                                                     <a href="https://www.luogu.com.cn/">首页 - 洛谷 | 计算机科学教育新生态</a>
